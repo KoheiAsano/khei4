@@ -1,6 +1,6 @@
 template <typename T, T MOD = 1000000007>
 struct Mint {
-    static const T mod = MOD;
+    static constexpr T mod = MOD;
     T v;
     Mint() : v(0)
     {
@@ -89,10 +89,13 @@ struct Mint {
     {
         return v < a.v;
     }
-    // this doesn't work
-    ostream& operator<<(ostream& os)
-    {
-        os << this->v;
-        return os;
-    }
 };
+template <typename T, T MOD>
+ostream& operator<<(ostream& os, Mint<T, MOD> m)
+{
+    os << m.v;
+    return os;
+}
+// member
+template <typename T, T MOD>
+constexpr T Mint<T, MOD>::mod;
