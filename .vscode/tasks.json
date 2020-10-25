@@ -6,7 +6,7 @@
         {
             "type": "shell",
             "label": "g++ build active file",
-            "command": "/usr/bin/g++ -g ${fileDirname}/tmp.cpp -o ${fileDirname}/tmp -std=c++17 && .${fileDirname}/tmp",
+            "command": "/usr/bin/g++ -g ${fileDirname}/tmp.cpp -o ${fileDirname}/tmp -std=c++17 && ${fileDirname}/tmp",
             // "command": "cd ${fileDirname} && g++ -o tmp tmp.cpp -std=c++17 && ./tmp"
             "options": {
                 "cwd": "/usr/bin"
